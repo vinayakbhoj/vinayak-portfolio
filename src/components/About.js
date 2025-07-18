@@ -4,11 +4,11 @@ import { FiUser, FiMapPin, FiMail, FiPhone, FiCalendar } from 'react-icons/fi';
 
 const About = () => {
   const personalInfo = [
-    { icon: FiUser, label: 'Name', value: 'Your Name' },
-    { icon: FiMapPin, label: 'Location', value: 'Your City, Country' },
-    { icon: FiMail, label: 'Email', value: 'your.email@example.com' },
-    { icon: FiPhone, label: 'Phone', value: '+1 234 567 890' },
-    { icon: FiCalendar, label: 'Birthday', value: 'January 1, 1990' },
+    { icon: FiUser, label: 'Name', value: 'Vinayak Bhoj' },
+    { icon: FiMapPin, label: 'Location', value: 'Ashti, India' },
+    { icon: FiMail, label: 'Email', value: 'vinaykbhoj31@gmail.com' },
+    { icon: FiPhone, label: 'Phone', value: '+91 9420550836' },
+    { icon: FiCalendar, label: 'Birthday', value: 'January 31, 2005' },
   ];
 
   const containerVariants = {
@@ -139,7 +139,7 @@ I enjoy collaborating on real-world projects, solving problems, and learning new
             >
               {[
                 { number: '1+', label: 'Years Experience' },
-                { number: '10+', label: 'Projects Completed' },
+                { number: '5+', label: 'Projects Completed' },
                 
               ].map((stat, index) => (
                 <div key={stat.label} className="text-center">

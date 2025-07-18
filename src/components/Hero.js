@@ -4,10 +4,10 @@ import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiDownload } from 'react-icons
 
 const Hero = () => {
   const socialLinks = [
-    { icon: FiGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FiGithub, href: 'https://github.com/vinayakbhoj', label: 'GitHub' },
+    { icon: FiLinkedin, href: 'http://www.linkedin.com/in/vinayak-bhoj31', label: 'LinkedIn' },
     { icon: FiTwitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: FiMail, href: 'mailto:your.email@example.com', label: 'Email' },
+    { icon: FiMail, href: 'mailto:vinaykbhoj31@gmail.com', label: 'Email' },
   ];
 
   return (
