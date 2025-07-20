@@ -62,7 +62,7 @@ const About = () => {
             <div className="relative">
               {/* Profile image */}
               <img
-                src="/my_image.jpg"
+                src="/vinayak_image.jpg"
                 alt="Profile"
                 className="w-80 h-80 mx-auto object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800"
               />
