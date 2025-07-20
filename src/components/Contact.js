@@ -19,13 +19,13 @@ const Contact = () => {
       icon: FiMail,
       title: 'Email',
       value: 'vinaykbhoj31@gmail.com',
-      link: 'mailto:your.email@example.com'
+      link: 'mailto:vinaykbhoj31@gmail.com'
     },
     {
       icon: FiPhone,
       title: 'Phone',
       value: '+91 9420550836',
-      link: 'tel:+9420550836'
+      link: 'tel:+919420550836'
     },
     {
       icon: FiMapPin,
@@ -49,12 +49,22 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Replace with your EmailJS service ID, template ID, and public key
+      // Check if environment variables are set
+      const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('EmailJS environment variables not configured');
+        setSubmitStatus('error');
+        return;
+      }
+
       const result = await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        serviceId,
+        templateId,
         formRef.current,
-        'YOUR_PUBLIC_KEY'
+        publicKey
       );
 
       if (result.status === 200) {

@@ -45,20 +45,43 @@ npm start
 
 ### EmailJS Setup
 
-1. Sign up at [EmailJS](https://www.emailjs.com/)
-2. Create a new service (Gmail, Outlook, etc.)
-3. Create an email template
-4. Update the Contact component with your credentials:
+1. **Sign up at EmailJS**: Go to [EmailJS](https://www.emailjs.com/) and create an account
 
-```javascript
-// In src/components/Contact.js
-const result = await emailjs.sendForm(
-  'YOUR_SERVICE_ID',      // Replace with your service ID
-  'YOUR_TEMPLATE_ID',     // Replace with your template ID
-  formRef.current,
-  'YOUR_PUBLIC_KEY'       // Replace with your public key
-);
-```
+2. **Create a new service**:
+   - Go to Email Services
+   - Add a new service (Gmail, Outlook, etc.)
+   - Connect your email account
+   - Note down your Service ID
+
+3. **Create an email template**:
+   - Go to Email Templates
+   - Create a new template
+   - Use variables: `{{name}}`, `{{email}}`, `{{subject}}`, `{{message}}`
+   - Note down your Template ID
+
+4. **Get your Public Key**:
+   - Go to Account > API Keys
+   - Copy your Public Key
+
+5. **Create environment file**:
+   ```bash
+   # Create .env file in the root directory
+   cp env.example .env
+   ```
+
+6. **Update .env file** with your credentials:
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id_here
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+   ```
+
+7. **Restart the development server**:
+   ```bash
+   npm start
+   ```
+
+**Note**: The `.env` file should be added to `.gitignore` to keep your credentials secure.
 
 ### Customization
 
