@@ -1,7 +1,5 @@
 # Modern Developer Portfolio
 
-live: [vinayak-portfolio](https://vinayak-portfolio-ten.vercel.app/) .
-
 A beautiful, responsive developer portfolio built with React, Tailwind CSS, and Framer Motion.
 
 ## 🚀 Features
